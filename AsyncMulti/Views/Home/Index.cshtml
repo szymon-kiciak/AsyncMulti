@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<input type="button" id="UseShipAddr" value="button"/>
+
+
+<script type="text/javascript">
+	$(document).ready(function () {
+
+		$('#UseShipAddr').click(function () {
+
+			$.ajax({
+				url: "Home/GetData",
+				type: "GET",
+				cache: false,
+				async: true,
+				success: function (data) {
+					alert(data);
+				}
+			});
+		});
+	});
+
+
+
+</script>
